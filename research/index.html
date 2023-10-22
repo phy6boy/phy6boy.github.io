@@ -37,6 +37,21 @@ window.onload = wrap_img;
     elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
     });
 </script>
+<!-- MatJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    displayIndent: '2em',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": "0em 0em 1em 0em"}}
+    }
+});
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -52,12 +67,13 @@ window.onload = wrap_img;
           </span>
         </label>
             
-        <div class="trigger"><a class="page-link" href="../research/index.html">Research</a><a class="page-link" href="../publications/index.html">Publications</a> </div>
+        <div class="trigger"><a class="page-link" href="../blog/index.html">Blog</a><a class="page-link" href="../research/index.html">Research</a><a class="page-link" href="../publications/index.html">Publications</a> </div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-<h2><a name="Publications" class="anchor" href="#Research"><span class="octicon octicon-link">I will update this soon</span></a></h2>
+<h2>Research</h2><br>
+<a href="https://en.wikipedia.org/wiki/Active_matter"><p>Active matter</a> is an incresingly popular area of out-of equilibrium physics. It is a type of matter composed of particles that can move on their own. These type of particles are termmed as self-ropelled particles, and is the basic ingredients of active matter. I am focussing on self-propelled particles and their dynamics when subjected to an external force field, especially magnetic field.</p><br>
 <hr>
   
 
@@ -70,7 +86,7 @@ window.onload = wrap_img;
     <div class="footer-col-wrapper">
       <div class="footer-col">
 <p><small>
-last updated  21-Oct-2023
+last updated 22 October 2023
 </small></p>
       </div>
     </div>
