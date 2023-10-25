@@ -52,10 +52,14 @@ MathJax.Hub.Config({
     }
 });
 </script>
+<!-- Code syntax highlght -->
 <link rel="stylesheet" href="../highlight/styles/xcode.css">
 <script src="../highlight/highlight.min.js"></script>
-
-<script>hljs.highlightAll();</script>
+<script src="../highlight/highlightjs-line-numbers.js"></script>
+<script>
+hljs.highlightAll();
+// hljs.initLineNumbersOnLoad();
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -86,6 +90,11 @@ $$
 import scipy as sp
 import matplotlib.pyplot as plt
 
+x = (5 + 8)*(4/5)
+print(x)
+print(x is 3)
+
+# This is a comment
 x = np.arange(-np.pi, np.pi, 0.001)
 y = np.sin(x)
 plt.plot(x, y, "r")
