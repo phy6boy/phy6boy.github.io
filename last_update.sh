@@ -18,6 +18,6 @@ file='blog/index.html'
 echo "Updating file: $file" 
 sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
 
-file='blog/diffeqpy.html'
+file='blog/bm1.html'
 echo "Updating file: $file" 
 sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
