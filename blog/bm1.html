@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Muhammed Muhsin A.</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../images/this.png">
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!-- MatJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    displayIndent: '2em',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": "0em 0em 1em 0em"}}
+    }
+});
+</script>
+<!-- Code syntax highlght -->
+<link rel="stylesheet" href="../highlight/styles/xcode.css">
+<script src="../highlight/highlight.min.js"></script>
+<script src="../highlight/highlightjs-line-numbers.js"></script>
+<script>
+hljs.highlightAll();
+// hljs.initLineNumbersOnLoad();
+</script>
+</head>
+<body>
+<header class="site-header">
+
+
+  <div class="wrapper"><a class="site-title" rel="author" href="https://phy6boy.github.io/">Homepage</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+            
+        <div class="trigger"><a class="page-link" href="../blog/index.html">Blog</a><a class="page-link" href="../research/index.html">Research</a><a class="page-link" href="../publications/index.html">Publications</a> </div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+<h1>Brownian Motion</h1>
+<img src="images/brownian.gif" alt="Brownian Motion" style="width:48%" class="center">
+<p>
+    In this blog, I am going to explain about one of the simple yet complex phenomena - Brownian motion, and why it is important. The history of Brownian motion starts with the botanist <a href="https://en.wikipedia.org/wiki/Robert_Brown_(botanist,_born_1773)">Robert Brown</a>, who first observed this motion in grains of pollen. Later, Albert Einstein gave an explanation for the Brownian motion
+</p>
+
+<!-- <h2>Test Program</h2>
+<pre><code class="language-python">import numpy as np
+import scipy as sp
+import matplotlib.pyplot as plt
+
+x = (5 + 8)*(4/5)
+print(x)
+print(x is 3)
+
+# This is a comment
+x = np.arange(-np.pi, np.pi, 0.001)
+y = np.sin(x)
+plt.plot(x, y, "r")
+plt.show()
+</code></pre>
+ -->
+
+    </div>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+<p><small>
+last updated 25 October 2023
+</small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
