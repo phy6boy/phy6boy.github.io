@@ -21,3 +21,7 @@ sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
 file='blog/bm1.html'
 echo "Updating file: $file" 
 sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
+
+file='blog/bm2.html'
+echo "Updating file: $file" 
+sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
