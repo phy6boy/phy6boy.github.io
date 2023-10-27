@@ -508,3 +508,16 @@ select {
 	  display: block;
 	}
 }
+
+pre {
+	padding: 0px;
+padding: block 0; 
+white-space: pre-line;
+border: 0px;
+box-shadow : 10px 10px 15px #000;
+}
+
+p {
+	text-align: justify;
+	text-justify: inter-word;
+}

@@ -45,12 +45,20 @@ MathJax.Hub.Config({
         displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
         processEscapes: true
     },
-    displayAlign: 'left', // Change this to 'center' to center equations.
+    displayAlign: 'center', // Change this to 'center' to center equations.
     displayIndent: '2em',
     "HTML-CSS": {
         styles: {'.MathJax_Display': {"margin": "0em 0em 1em 0em"}}
     }
 });
+</script>
+<!-- Code syntax highlght -->
+<link rel="stylesheet" href="../highlight/styles/atom-one-dark-reasonable.css">
+<script src="../highlight/highlight.min.js"></script>
+<!-- <script src="../highlight/highlightjs-line-numbers.js"></script> -->
+<script>
+hljs.highlightAll();
+// hljs.initLineNumbersOnLoad();
 </script>
 </head>
 <body>
@@ -72,8 +80,20 @@ MathJax.Hub.Config({
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-<h2 id="python-de"><a href="bm1.html">Brownian Motion - Part 1</a></h2>
-<h2 id="python-de"><a href="bm2.html">Brownian Motion - Part 2</a></h2>
+<h1>Simulating Langevin Equation for Brownian Motion</h1>
+<p>
+    Here, we are going to look at how to simulate the dynamics of a Brownian particle. I will use Python programming language for the demonstration.
+    However, readers are encouraged to use any program they find suitable. Let's start with the Langevin equation to be solved. 
+    Restricting ourself to one dimension, we have,
+    $$
+      m \frac{d^2 x}{dt^2} = -\gamma v(t) + \eta(t)
+    $$
+    Here, the "White noise" $\eta(t)$ has the properties
+    $$
+      \langle \eta(t) \rangle = 0 \ \ \ \text{and}\ \ \ \  \langle \eta(t) \eta(t') \rangle = 2 \gamma k_B T \delta(t - t')
+    $$
+</p>
+
     </div>
       </div>
     </main><footer class="site-footer h-card">
