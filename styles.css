@@ -511,10 +511,9 @@ select {
 
 pre {
 	padding: 0px;
-padding: block 0; 
-white-space: pre-line;
-border: 0px;
-box-shadow : 10px 10px 15px #000;
+	padding: block 0;
+	border: 0px;
+	box-shadow : 10px 10px 15px #000;
 }
 
 p {
