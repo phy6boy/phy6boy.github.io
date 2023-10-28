@@ -1,27 +1,6 @@
 #!/bin/bash
 
-file='index.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
-
-
-file='publications/index.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
-
-
-file='research/index.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
-
-file='blog/index.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
-
-file='blog/bm1.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
-
-file='blog/bm2.html'
-echo "Updating file: $file" 
-sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
+for file in $(find . -name "*.html"); do
+    echo "updating $file"
+    sed -i "s/.*last updated.*/last updated $(date '+%d %B %Y')/g" $file
+done
